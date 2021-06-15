@@ -1,0 +1,41 @@
+{
+  "name": "nodebb-plugin-dingtalk-login-business",
+  "version": "0.0.1",
+  "description": "NodeBB 钉钉扫码登录通过自己实现接口获取用户企业信息",
+  "main": "library.js",
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "oauth",
+    "registration",
+    "web"
+  ],
+  "author": {
+    "name": "Dylan",
+    "email": "476618360@qq.com"
+  },
+  "license": "MIT",
+  "readme": "",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "passport": "^0.3.0",
+    "passport-oauth2": "https://github.com/lee715/passport-oauth2/archive/v1.3.0-fork.tar.gz",
+    "passport-strategy": "^1.0.0",
+    "querystring": "^0.2.0",
+    "urllib": "^2.9.1",
+    "xtend": "^4.0.0"
+  },
+  "nbbpm": {
+    "compatibility": "^1.14.3"
+  },
+  "devDependencies": {
+    "debug": "latest",
+    "eslint": "^4.12.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "nodebb-plugin-dingtalk-login-business",
+  "name": "NodeBB dingtalk",
+  "description": "NodeBB Plugin that allows users to login/register via their dingtalk account.",
+  "library": "./library.js",
+  "hooks": [
+    { "hook": "filter:auth.init", "method": "getStrategy" },
+    { "hook": "filter:user.delete", "method": "deleteUserData" },
+    {
+      "hook": "static:app.load",
+      "method": "init"
+    },
+    {
+        "hook": "filter:admin.header.build",
+        "method": "addMenuItem"
+    },
+    {
+        "hook": "filter:user.whitelistFields",
+        "method": "appendUserHashWhitelist"
+    }
+  ],
+  "staticDirs": {
+      "static": "./static"
+  },
+  "templates": "static/templates",
+  "less": [
+      "static/less/style.less"
+  ],
+  "acpScripts": [
+      "static/lib/admin.js"
+  ]
+}
