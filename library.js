@@ -63,7 +63,7 @@ Dingtalk.getStrategy = function (strategies, callback) {
 						// 		dingId,
 						// 		openid
 						// }
-						console.log('====>获取钉钉信息3====>', accessToken, refreshToken, profile,done);
+						// console.log('====>获取钉钉信息3,accessToken,refreshToken', accessToken, refreshToken, profile,done);
 						// 如果uid大于0
 						if (
 							req.hasOwnProperty('user') &&
@@ -101,7 +101,7 @@ Dingtalk.getStrategy = function (strategies, callback) {
 								accessToken,
 								refreshToken,
 								function (err, user) {
-									console.log('====>登录回调',err, user);
+									// console.log('====>登录回调',err, user);
 									if (err) {
 										return done(err);
 									}
@@ -221,7 +221,7 @@ Dingtalk.login = function (
 
 		try {
 			let userInfo = await Dingtalk.getUserInfoByUnionid(unionid)
-			console.log('====>获取到企业用户信息', Object.prototype.toString.call(userInfo), userInfo);
+			// console.log('====>获取到企业用户信息', userInfo);
 		
 			if (userInfo.errcode) {
 				return callback( new Error(JSON.stringify(userInfo)));
@@ -251,7 +251,7 @@ Dingtalk.login = function (
  
 		 if (uid !== null) {
 			 // 老用户
-			 console.log('====>老用户NO.4-1====>',uid)
+			//  console.log('====>老用户NO.4-1',uid)
 			 Dingtalk.storeTokens(uid, accessToken, refreshToken);
 			 // 更新用户信息
 			 user.setUserFields(uid, userData, function (err, user) {
@@ -263,7 +263,7 @@ Dingtalk.login = function (
 		 } else {
 			 // 新用户
 			 const success = function (uid) {
-				 console.log('====>写入新用户uid信息NO.5====>', uid)
+				//  console.log('====>写入新用户uid信息NO.5', uid)
 				 // 添加用户信息
 				 user.setUserFields(uid, {
 					 dingtalk_nick:nick,
@@ -305,9 +305,9 @@ Dingtalk.login = function (
  
 			 // 邮箱不能为空
 			 user.create(userData, function (err, uid) {
-				 console.log('====>新用户NO.4-2===>', uid,userData)
+				//  console.log('====>新用户NO.4-2===>', uid,userData)
 				 if (err) {
-					 console.log('====>新用户创建失败NO.4-3===>',uid,err)
+					 console.log('====>新用户创建失败NO.4-3',uid,err)
 					 // 如果用户名是无效的
 					 user.create({ username:  nick+userInfo.unionid, email: `${userInfo.unionid}@your_company.com`,...userData}, function (
 						 err,

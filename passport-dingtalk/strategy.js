@@ -92,14 +92,14 @@ function Strategy(options, verify) {
 				},
 			},
 			function (err, data, res) {
-				console.log('====>getOAuthAccessToken1====>',data,res);
+				console.log('====>getOAuthAccessToken1',data,res);
 				if (err) return callback(err);
 				var openid = data.openid;
 				var unionid = data.unionid;
 				var persistent_code = data.persistent_code;
 				if (!openid || !persistent_code)
 					return callback(new Error('getPersistentCode failed'));
-				console.log('====>getOAuthAccessToken2====>',data);
+				// console.log('====>getOAuthAccessToken2====>',data);
 				urllib.request(
 					self._snsTokenURL + '?access_token=' + self.access_token,
 					{
