@@ -1,8 +1,4 @@
-
-
-## Nodebb Plugin Dingtalk Login Business
-
-
+# Nodebb Plugin Dingtalk Login Business
 
 NodeBB 钉钉二维码登录插件,接入接口实现企业用户信息获取。
 钉钉登录
