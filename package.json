@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-dingtalk-login-business",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "NodeBB 钉钉扫码登录通过自己实现接口获取用户企业信息",
   "main": "library.js",
   "keywords": [
