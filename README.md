@@ -1,11 +1,16 @@
+
+
 ## Nodebb Plugin Dingtalk Login Business
+
+
 
 NodeBB 钉钉二维码登录插件,接入接口实现企业用户信息获取。
 钉钉登录
+
 ## 安装
 
     $ npm install nodebb-plugin-dingtalk-login-business
-    
+
 ## 使用
 
 OAuth2.0网页授权，使用此接口须通过钉钉开放平台认。
@@ -15,12 +20,12 @@ OAuth2.0网页授权，使用此接口须通过钉钉开放平台认。
 参考:  nodebb-plugin-dingtalk-login
 在此基础上，通过自己实现接口(getUserInfoByUnionid)获取企业用户信息。
 
-![dingTalk](./钉钉扫码配置.png)
+![钉钉扫码配置](钉钉扫码配置.png)
 POST接口,入参出参。
 
-```javascript
+``` javascript
 // 接口入参 ，unionid 会根据 AppId 和 AppSecret生成,正确在ACP中录入即可。
-{unionid:unionid}
+    {unionid:unionid}
 
 // 出参里的res.data(供参考)，具体要去钉钉开放平台勾选对应权限
 // res.status 为 200 时
@@ -72,5 +77,6 @@ res.data = {
 
 ```
 
-#### 写插件不易，如果对您有帮助，请打赏，谢谢🙏！
-![](./微信赏赞码.png)
+### 写插件不易，如果对您有帮助，请打赏，谢谢!🙏
+
+![微信赏赞码](微信赏赞码.png)
