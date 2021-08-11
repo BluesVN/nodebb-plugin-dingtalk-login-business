@@ -16,7 +16,9 @@ OAuth2.0网页授权，使用此接口须通过钉钉开放平台认。
 参考:  nodebb-plugin-dingtalk-login
 在此基础上，通过自己实现接口(getUserInfoByUnionid)获取企业用户信息。
 
-![钉钉扫码配置](钉钉扫码配置.png)
+<!-- ![钉钉扫码配置](钉钉扫码配置.png) -->
+![钉钉扫码配置](https://raw.githubusercontent.com/BluesVN/nodebb-plugin-dingtalk-login-business/master/%E9%92%89%E9%92%89%E6%89%AB%E7%A0%81%E9%85%8D%E7%BD%AE.png)
+
 POST接口,入参出参。
 
 ``` javascript
@@ -75,4 +77,5 @@ res.data = {
 
 ### 写插件不易，如果对您有帮助，请打赏，谢谢!🙏
 
-![微信赏赞码](微信赏赞码.png)
+<!-- ![微信赏赞码](微信赏赞码.png) -->
+![微信赏赞码](https://raw.githubusercontent.com/BluesVN/nodebb-plugin-dingtalk-login-business/master/%E5%BE%AE%E4%BF%A1%E8%B5%8F%E8%B5%9E%E7%A0%81.png)

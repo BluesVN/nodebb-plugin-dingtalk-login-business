@@ -230,9 +230,9 @@ Dingtalk.login = function (
 				
 				let _nickName = userInfo.extension ? JSON.parse(userInfo.extension)['花名'] : userInfo.name.split('（')[0]
 				let userData  = {
-					username: _nickName,
-					userslug: _nickName,
-					fullname: userInfo.name,
+					username: _nickName||userInfo.name||'',
+					userslug: _nickName||userInfo.name||'',
+					fullname: userInfo.name||'',
 					email: userInfo.org_email || `${userInfo.unionid}@your_company.com`,
 					picture: userInfo.avatar,
 					location: userInfo.work_place,
